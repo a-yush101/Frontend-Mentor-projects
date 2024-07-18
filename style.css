@@ -1,0 +1,151 @@
+:root{
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light_Grey: hsl(217, 12%, 63%);
+    --Dark_Blue: hsl(213, 20%, 18%);
+    --Very_Dark_Blue: hsl(216, 12%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--Very_Dark_Blue);
+}
+.box{
+    height: 370px;
+    width: 400PX;
+    background-color: var(--Dark_Blue);
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.starIcon{
+    height: 40px;
+    width: 40px;
+    background-color: hsl(213, 21%, 25%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    color: var(--White);
+    font-size: 30px;
+    font-weight: 700;
+    padding-top: 30px;
+}
+p{
+    color: var(--Light_Grey);
+    font-size: 15px;
+    padding-top: 10px;
+    font-weight: 400;
+}
+.ratingContainer{
+    width: 100%;
+    height:50px;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+}
+.ratings{
+    height: 50px;
+    width: 50px;
+    background-color: hsl(213, 21%, 25%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Light_Grey);
+    font-weight: 700;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.ratings:hover{
+    background-color: var(--Orange);
+    color: var(--Dark_Blue);
+}
+.active{
+    background-color: var(--White);
+    color: var(--Dark_Blue);
+}
+.submit{
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 30px;
+    border-radius: 30px;
+    background-color: var(--Orange);
+    color: var(--Dark_Blue);
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+.submit:hover{
+    background-color: var(--White);
+}
+#thankyouBox{
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 410px;
+    text-align: center;
+    padding-top: 10px;
+    height: 400px;
+}
+#selected{
+    background-color: hsl(213, 21%, 25%);
+    padding: 7px 25px 5px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    color: var(--Orange);
+    border-radius: 30px;
+}
+#thankMsg{
+    padding-top: 40px;
+}
+@media screen and (max-width: 480px) {
+    .box{
+        width: 90%;
+        padding: 20px;
+        height: 310px;
+    }
+    #thankyouBox{
+        width: 90%;
+    }
+    h3{
+        font-size: 24px;
+        padding-top: 20px;
+    }
+    p{
+        font-size: 14px;
+    }
+    .ratingContainer{
+        height: 40px;
+        margin-top: 15px;
+    }
+    .ratings{
+        height: 30px;
+        width: 30px;
+    }
+    .submit{
+        height: 35px;
+        font-size: 0.9rem;
+        margin-top: 15px;
+    }
+}
