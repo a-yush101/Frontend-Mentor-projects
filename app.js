@@ -4,6 +4,7 @@ const dismissBtn = document.getElementById("dissMsg");
 const thankPage = document.querySelector(".thankYouBox");
 const inputPage = document.querySelector(".container");
 const errorMsg = document.querySelector(".errorMsg");
+const emaiId = document.getElementById("emailId");
 
 
 submitBtn.addEventListener("click",(event) => {
@@ -18,6 +19,7 @@ submitBtn.addEventListener("click",(event) => {
         errorMsg.style.visibility = "hidden";
         thankPage.style.display = "flex";
         inputPage.style.display = "none";
+        emaiId.innerText = emailInput.value;
     }
 })
     
