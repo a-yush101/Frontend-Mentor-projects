@@ -1,0 +1,257 @@
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark_Slate_Grey: hsl(234, 29%, 20%);
+    --Charcoal_Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--Dark_Slate_Grey);
+    display: grid;
+    place-items: center;
+}
+.container{
+    height:70%;
+    width:53%;
+    background-color: var(--White);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formBOx{
+    height: 90%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    margin-left: 50px;
+}
+.imgBox{
+    height: 90%;
+    width: 60%;
+    background-size: cover;
+    margin-right: 20px;
+    background-image: url(assets/images/illustration-sign-up-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+h3{
+    font-weight: 700;
+    color: var(--Dark_Slate_Grey);
+    font-size: 3rem;
+
+}
+p{
+    font-size: 0.8rem;
+    color: var(--Charcoal_Grey);
+}
+.join{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.list{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+.list:nth-child(5){
+    margin-bottom: 30px;
+}
+label{
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--Dark_Slate_Grey);
+}
+input{
+    padding: 10px 10px 10px 20px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.emailInput{
+    border: solid 1px var(--Grey);
+    text-align:left;
+    cursor: pointer;
+}
+input::placeholder{
+    color: var(--Grey);
+}
+button{
+    margin-top: 15px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Dark_Slate_Grey);
+    color: var(--White);
+    font-weight: 700;
+    cursor: pointer;
+}
+button:hover{
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+.errorMsg{
+    color: var(--Tomato);
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-left: 159px;
+    visibility:hidden;
+}
+.errorInput{
+    background-color: var(--Tomato);
+    color: var(--Tomato);
+    background-color: hsla(4, 100%, 67%, 0.329);
+    border: solid 1px var(--Tomato);
+    cursor: pointer;
+}
+.thankYouBox{
+    background-color: var(--White);
+    height: 55%;
+    width: 28%;
+    position: absolute;
+    border-radius: 30px;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 40px 30px 40px;
+}
+.checkImg{
+    height: 50px;
+    width: 50px;
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+#Checkmark{
+    height: 100%;
+    width: 100%;
+}
+#TYSubs{
+    margin-bottom: 20px;
+    padding: 0;
+}
+#dissMsg{
+    margin-top: 40px;
+    cursor: pointer;
+}
+#dissMsg:hover{
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+@media screen and (max-width: 1024px){
+    .container {
+        width: 65%;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    .imgBox {
+        background-image: url(assets/images/illustration-sign-up-desktop.svg);
+    }
+    .thankYouBox {
+        width: 35%;
+    }
+    #dissMsg{
+        width: 100%;
+        margin-top: 15%;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .container {
+        width: 90%;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    .imgBox {
+        background-image: url(assets/images/illustration-sign-up-desktop.svg);
+    }
+    .thankYouBox {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .container{
+        height: 100vh;
+        width: 100%;
+        border-radius: 0px;
+        flex-direction: column-reverse;
+    }
+    .imgBox{
+        height: 60%;
+        width: 100%;
+        margin: 0px;
+        background-color: red;
+        background-repeat: no-repeat;
+        background-image: url(assets/images/illustration-sign-up-mobile.svg);
+        background-size: cover;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .formBOx{
+        height: 70%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        margin-left: 10px;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    h3{
+        font-size: 2.2rem;
+        margin-top: 0px;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+    input{
+        padding: 10px 10px 10px 20px;
+        width: 90%;
+        border-radius: 5px;
+        margin: 0;
+    }
+    button{
+        width: 90%;
+    }
+    .errorMsg{
+        margin-left: 80px;
+    }
+    .errorInput{
+        background-color: var(--Tomato);
+        color: var(--Tomato);
+        background-color: hsla(4, 100%, 67%, 0.329);
+        border: solid 1px var(--Tomato);
+        cursor: pointer;
+    }
+    .thankYouBox{
+        height: 100vh;
+        width: 100%;
+        border-radius: 0;
+        padding: 90px 25px 90px 20px;
+    }
+    #TYSubs{
+        margin-top: 10px;
+    }
+    #dissMsg{
+        width: 100%;
+        margin-top: 80%;
+    }
+}
+
+
