@@ -40,7 +40,7 @@ Users should be able to:
 
 #### Desktop View - Error State
 
-![Desktop View - Error State](./screenshots/Desktop-error-state.png)
+![Desktop View - Error State](./screenshots/Desktop-erroe-state.png)
 
 #### Desktop View - Thank You State
 
