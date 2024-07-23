@@ -81,11 +81,14 @@ In this project, I learned how to validate email addresses using JavaScript and 
 <p>A confirmation email has been sent to <strong id="emailId">ash@loremcompany.com</strong>. 
 Please open it and click the button inside to confirm your subscription.</p>
 ```
+### CSS
 ```css
 #dissMsg:hover {
     background: linear-gradient(45deg, #ff416c, #ff4b2b);
 }
 ```
+### JavaScript
+
 ```javascript
 function validateEmail() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
