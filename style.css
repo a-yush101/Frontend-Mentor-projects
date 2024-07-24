@@ -1,0 +1,144 @@
+:root{
+    --Light_Cyan: hsl(193, 38%, 86%);
+    --Neon_Green: hsl(150, 100%, 66%);
+    --Grayish_Blue: hsl(217, 19%, 38%);
+    --Dark_Grayish_Blue: hsl(217, 19%, 24%);
+    --Dark_Blue: hsl(218, 23%, 16%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope";
+    font-weight: 800;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: var(--Dark_Blue);
+}
+.container{
+    height: 40%;
+    width:35%;
+    background-color: var(--Dark_Grayish_Blue);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+.divider{
+    height: 8%;
+    width: 100%;
+    background-image: url(images/pattern-divider-desktop.svg);
+    background-size: contain;
+}
+.adviceNo{
+    font-size: 11px;
+    color: var(--Neon_Green);
+    margin-bottom: 20px;
+    display: block;
+    letter-spacing: 4px;
+}
+.adviceText{
+    color: var(--Light_Cyan);
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+    display: flex;
+    font-size: 28px;
+    height: 55%;
+}
+.randomize{
+    position: fixed;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: var(--Neon_Green);
+    border: none;
+    display: grid;
+    place-items: center;
+    top: 66%;
+    cursor: pointer;
+}
+.randomize:hover{
+    box-shadow: 0px 0px 25px 1px var(--Neon_Green);
+}
+
+/* Responsivenes */
+
+@media screen and (max-width: 1440px)
+{
+    .container{
+        height: 41%;
+        width:29%;
+        padding: 30px 20px 30px 20px;
+    }
+    .divider{
+        height: 7%;
+        background-image: url(images/pattern-divider-desktop.svg);
+    }
+    .adviceNo{
+        font-size: 11px;
+    }
+    .adviceText{
+        font-size: 24px;
+    }
+    .randomize{
+        top: 66%;
+    }
+}
+@media screen and (max-width: 1024px)
+{
+    .container{
+        height: 41%;
+        width:40%;
+    }
+}
+@media screen and (max-width: 800px)
+{
+    .container{
+        height: 41%;
+        width:60%;
+    }
+    .divider{
+        height: 8%;
+        background-image: url(images/pattern-divider-desktop.svg);
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .container{
+        height: 46%;
+        width:90%;
+    }
+    .divider{
+        height: 8%;
+        background-image: url(images/pattern-divider-mobile.svg);
+    }
+    .randomize{
+        top: 69%;
+    }
+}
+@media screen and (max-width: 380px)
+{
+    .divider{
+        height: 7%;
+        background-image: url(images/pattern-divider-mobile.svg);
+    }
+}
+@media screen and (max-width: 320px)
+{
+    .container{
+        height: 50%;
+    }
+    .divider{
+        height: 5.5%;
+        background-image: url(images/pattern-divider-mobile.svg);
+    }
+    .randomize{
+        top: 71%;
+    }
+}
